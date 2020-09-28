@@ -4,5 +4,6 @@
     "van-col": "@vant/weapp/col/index",
     "van-field": "@vant/weapp/field/index",
     "van-button": "@vant/weapp/button/index"
-  }
+  },
+  "navigationBarTitleText": "反馈"
 }

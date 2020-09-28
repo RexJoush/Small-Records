@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "小记录",
   "usingComponents": {
     "van-divider": "@vant/weapp/divider/index",
     "van-row": "@vant/weapp/row/index",
