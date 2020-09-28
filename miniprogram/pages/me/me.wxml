@@ -1,0 +1,81 @@
+<!--pages/me/me.wxml-->
+
+<van-row>
+
+  <van-col span="22" offset="1">
+
+    <!-- 头像部分 -->
+    <view class="user">
+
+      <!-- 头像和名字 -->
+      <span wx:if="{{isLogin}}">
+        <van-row>
+          <van-col span="24">
+            <view class="user_avatar">
+              <van-image
+                round
+                width="130rpx"
+                height="130rpx"
+                fit="cover"
+                src="{{userInfo.avatarUrl}}"
+              />
+            </view>
+          </van-col>
+          <van-col span="24">
+            <view class="user_nickname">
+              <view>{{userInfo.nickName}}</view>
+            </view>
+          </van-col>
+        </van-row>
+      </span>
+
+      <!-- 登录按钮 -->
+      <span wx:else>
+        <van-row>
+          <van-col span="8" offset="8">
+            <view class="loginBtn">
+              <van-button round type="info" color="#70AF9E" size="large" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</van-button>
+            </view>
+          </van-col>
+        </van-row>
+      </span>
+    </view>
+
+  </van-col>
+
+</van-row>
+
+<!-- 导航栏 -->
+<van-row>
+    <van-col span="22" offset="1">
+      <van-cell
+        custom-class="nav"
+        value-class="arrow"
+        icon="comment-o"
+        title="提交反馈"
+        is-link
+        link-type="navigateTo"
+        size="large"
+        bind:click="gotoFeedback"
+        center 
+      />
+      <!-- <van-cell title="单元格">
+        <van-icon slot="right-icon" name="search" class="custom-icon" />
+      </van-cell> -->
+    </van-col>
+</van-row>
+
+
+
+
+
+<view class="about">
+
+  <van-divider
+  contentPosition="center"
+  customStyle="color: #ffffff; border-color: #ffffff; font-size: 25rpx;"
+  >
+  <text bindtap="gotoAboutme" decode="true">Rex Joush | &nbsp;关于我</text>
+  </van-divider>
+
+</view>

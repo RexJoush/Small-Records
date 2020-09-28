@@ -1,0 +1,172 @@
+<!--pages/anniversary/anniversary.wxml-->
+
+<!-- 搜索框 -->
+<!-- <van-sticky>
+  <van-row>
+    <van-col span="24">
+      <van-search
+        placeholder="请输入搜索关键词"
+        background="#70AF9E"
+        bind:search="onSearch"
+        bind:cancel="onCancel"
+        bind:change="searchOnChange"
+      />
+    </van-col>
+  </van-row>
+</van-sticky> -->
+
+<!-- 纪念日主体部分 -->
+<block wx:for="{{anniversary}}" wx:key="*this" >
+  <view class="frame">
+    <van-row>
+      <van-col span="20" offset="2">
+        <!-- <view class="time"><span class="timeshadow">2020-09-23 19:35</span></view> -->
+        <view class="title">{{item.title}}</view>
+        <view class="eventDate">{{item.date}}</view>
+        <view class="anniversary" id="{{item.anniversary_id}}" style="background-color: {{item.color}};" bind:longpress="del">
+          
+        <view class="value">{{item.name}}<span class="day">{{item.value}}</span>天</view>
+
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+  
+</block>
+
+<view class="hint" wx:if="{{isData}}">
+  <text class="hint_text">快来添加你的第一条数据吧</text>
+</view>
+
+<!-- <view class="frame">
+    <van-row>
+      <van-col span="20" offset="2">
+        <view class="time"><span class="timeshadow">2020-09-23 19:35</span></view>
+        <view class="title">放假</view> 
+        <view class="eventDate">2020-10-01</view>
+        <view class="anniversary" id="id1" style="background-color: #F08080;" bind:longpress="del">
+        <view class="value">还有<span class="day">7</span>天</view>
+
+        </view>
+      </van-col>
+    </van-row>
+  </view> -->
+
+<!-- 弹出的遮罩框 -->
+<van-overlay show="{{show}}" bind:click="onClickHide">
+  <view class="wrapper">
+    <view class="block" catch:tap="noop">
+      <!-- 标题框 -->
+      <van-divider contentPosition="center"
+      customStyle="color: #fff;font-size:40rpx;"
+      >添加记录</van-divider>
+
+      <!-- 输入框 -->
+      <van-row>
+        <van-col span="20" offset="2">
+
+          <!-- 输入标题 -->
+          <van-cell-group>
+            <van-field
+              border="{{ true }}"
+              input-class="input"
+              value="{{title}}"
+              title-width="2.2em"
+              maxlength="15"
+              input-align="right"
+              label="标题"
+              bind:change="getTitle"
+            />
+
+            <!-- <picker mode="date" value="{{date}}" start="1900-01-01" end="2100-01-01" bindchange="bindDateChange">
+              <van-cell title-class="chooseDate" class="picker" value-class="chooseDate" title="选择日期" value="{{currentDate}}"/>
+            </picker> -->
+          </van-cell-group>
+
+          <!-- 输入内容 -->
+          <van-cell-group>
+            <!-- <van-field
+              value="{{value}}"
+
+              title-width="2.2em"
+              type="textarea"
+              maxlength="150"
+              show-word-limit
+              label="内容"
+              autosize
+              bind:change="getValue"
+            /> -->
+            
+
+
+            <!-- <van-field
+              value="{{currentDate}}"
+              title-width="4.2em"
+              label="选择日期"
+              bind:click="showPopup"
+            /> -->
+
+
+
+            <!-- 日期选择框 -->
+            <van-cell title-class="chooseDate" label-class="chooseDate" bind:click="showPopup" title="选择日期" value="{{date}}"/>
+            
+          </van-cell-group>
+        </van-col>
+      </van-row>
+      <van-row></van-row>
+      <!-- 按钮部分 -->
+      <van-row>
+        <van-col span="8" offset="8" custom-class="btn">
+          <van-button color="#E88081" round custom-class="btn1" size="large" bind:click="confirm">确定</van-button>
+        </van-col>
+        <van-col span="8" custom-class="btn">
+          <van-button color="#E88081" round custom-class="btn1" size="large" bind:click="cancel">取消</van-button>
+        </van-col>
+      </van-row>
+
+
+    </view>
+  </view>
+</van-overlay>
+
+<van-notify id="van-notify" />
+
+<!-- 删除框 -->
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />
+<!-- 底部添加按钮 -->
+<view class="container add">
+  <image src="../../images/add.png" bindtap="onClickShow"></image>
+</view>
+
+
+<!-- 日期选择弹出层 -->
+<van-popup
+  show="{{ dateSelectshow }}"
+  round
+  position="bottom"
+  custom-style="height: 40%;"
+  bind:close="onClose"
+> 
+    
+    <!-- <van-datetime-picker
+      type="date"
+      data-type="date"
+      value="{{ currentDate }}"
+      bind:input="dateSelectInput"
+      bind:confirm="dateSelectConfirm"
+      bind:cancel="dateSelectCancel"
+      min-date="{{ minDate }}"
+    /> -->
+    <van-datetime-picker
+    type="date"
+    data-type="date"
+    value="{{ currentDate }}"
+    min-date="{{ minDate }}"
+    max-date="{{ maxDate }}"
+    bind:input="dateSelectInput"
+    bind:confirm="dateSelectConfirm"
+    bind:cancel="dateSelectCancel"
+  />
+</van-popup>

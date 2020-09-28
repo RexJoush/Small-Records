@@ -1,0 +1,120 @@
+<!--index.wxml-->
+
+
+<!-- 通知栏 -->
+<van-row>
+  <van-notice-bar
+    left-icon="volume-o"
+    background="#70AF9E"
+    color="white"
+    custom-class="notice"
+    url="/pages/notice/notice"
+    text="{{notice}}"
+  />
+
+</van-row>
+
+<!-- 导航栏 -->
+<!-- 我的小记录 -->
+<van-row>
+    <van-col span="22" offset="1">
+      <van-cell
+        custom-class="nav1"
+        icon="label-o"
+        title="我的小记录"
+        is-link
+        link-type="navigateTo"
+        size="large"
+        bind:click="gotoRecord"
+        center 
+      />
+      <!-- <van-cell title="单元格">
+        <van-icon slot="right-icon" name="search" class="custom-icon" />
+      </van-cell> -->
+    </van-col>
+</van-row>
+
+<!-- 我的纪念日 -->
+<van-row>
+    <van-col span="22" offset="1">
+      <van-cell
+        custom-class="nav2"
+        icon="point-gift-o"
+        title="我的纪念日"
+        is-link
+        link-type="navigateTo"
+        size="large"
+        bind:click="gotoAnniversary"
+        center 
+      />
+      <!-- <van-cell title="单元格">
+        <van-icon slot="right-icon" name="search" class="custom-icon" />
+      </van-cell> -->
+    </van-col>
+</van-row>
+
+
+
+<!-- 底部添加按钮 -->
+<!-- <view class="container add">
+  <image src="../../images/add.png" bindtap="onClickShow" open-type="getUserInfo"></image>
+</view> -->
+
+<!-- 弹出的添加小记录遮罩框 -->
+<van-overlay show="{{show}}" bind:click="onClickHide">
+  <view class="wrapper">
+    <view class="block" catch:tap="noop">
+      <!-- 标题框 -->
+      <van-divider contentPosition="center"
+      customStyle="color: #fff;font-size:40rpx;"
+      >添加记录</van-divider>
+
+      <!-- 输入框 -->
+      <van-row>
+        <van-col span="20" offset="2">
+
+          <!-- 输入标题 -->
+          <van-cell-group>
+            <van-field
+              value="{{title}}"
+              title-width="2.2em"
+              maxlength="15"
+              show-word-limit
+              label="标题"
+              bind:change="getTitle"
+            />
+          </van-cell-group>
+
+          <!-- 输入内容 -->
+          <van-cell-group>
+            <van-field
+              value="{{value}}"
+              title-width="2.2em"
+              type="textarea"
+              maxlength="150"
+              show-word-limit
+              label="内容"
+              autosize
+              bind:change="getValue"
+            />
+          </van-cell-group>
+        </van-col>
+      </van-row>
+      <van-row></van-row>
+      <!-- 按钮部分 -->
+      <van-row>
+        <van-col span="8" offset="8" custom-class="btn">
+          <van-button color="#E88081" round custom-class="btn1" size="large" bind:click="confirm">确定</van-button>
+        </van-col>
+        <van-col span="8" custom-class="btn">
+          <van-button color="#E88081" round custom-class="btn1" size="large" bind:click="cancel">取消</van-button>
+        </van-col>
+      </van-row>
+    
+
+    </view>
+  </view>
+</van-overlay>
+
+
+<van-notify id="van-notify" />

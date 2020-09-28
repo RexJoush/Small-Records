@@ -1,0 +1,82 @@
+/* pages/me/me.wxss */
+
+page {
+  height: 100%;
+  width: 100%;
+  /* border: springgreen 1px solid; */
+}
+
+/* 底部关于我 */
+.about {
+  position: fixed;
+  bottom: 10rpx;
+  width: 100%;
+}
+
+
+/* 用户登录部分 */
+.user {
+  background-color: #E88081;
+  align-items: center;
+  color: white;
+  font-size: 35rpx;
+  /* display: flex; */
+  margin: 20rpx auto;
+  /* margin-top: -30rpx; */
+  width: 100%;
+  /* border: beige 1px solid; */
+  height: 20%;
+  /* text-align: center; */
+  border-radius: 30rpx;
+  padding-top: 13%;
+  padding-bottom: 5%;
+}
+
+.user .loginBtn {
+  position: relative;
+  padding-bottom: 10%;
+}
+
+.user .user_avatar {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+.user .user_nickname {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 20rpx;
+}
+
+
+
+
+/* 导航部分 */
+.van-notice-bar__content {
+  font-size: medium;
+}
+.nav {
+  /* border: 1px black solid; */
+  border-radius: 30rpx;
+  color: white !important;
+  background-color: #E88081 !important;
+  margin-right: 30rpx !important;
+  position: relative !important;
+  margin-top: 20rpx !important;
+  padding: 30rpx !important;
+}
+
+.arrow {
+  border: solid 1px black;
+}
+
+.van-cell:after{
+  border-bottom: 0 !important;
+}
+
+.van-icon-arrow {
+  color: white !important;
+}

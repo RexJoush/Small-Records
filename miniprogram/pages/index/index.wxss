@@ -1,0 +1,72 @@
+/**index.wxss**/
+
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 100rpx;
+}
+
+.add{
+  position: fixed;
+  bottom: 10rpx;
+  width: 100%;
+}
+
+.add image{
+  margin: 0 auto;
+  width: 100rpx;
+  height: 100rpx;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 80%;
+  height: 60%;
+  background-color: #70AF9E;
+}
+
+.btn {
+  position: fixed;
+  bottom: 280rpx;
+  left: 15%;
+  padding-left: 10rpx;
+}
+
+.notice {
+  height: 100rpx;
+/*   
+  border-bottom: white solid 1rpx;
+  border-top: white solid 1rpx; */
+}
+.van-notice-bar__content {
+  font-size: medium;
+}
+.nav1 {
+  border-radius: 30rpx;
+  color: white !important;
+  background-color: #FA8072 !important;
+  position: relative !important;
+  margin-top: 30rpx !important;
+  padding: 30rpx !important;
+}
+.nav2 {
+  border-radius: 30rpx;
+  color: white !important;
+  background-color: #87ceea !important;
+  position: relative !important;
+  margin-top: 30rpx !important;
+  padding: 30rpx !important;
+}
+.van-cell:after{
+  border-bottom: 0 !important;
+}
+
+.van-icon-arrow {
+  color: white !important;
+}

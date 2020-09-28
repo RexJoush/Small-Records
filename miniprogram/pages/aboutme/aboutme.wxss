@@ -1,0 +1,7 @@
+/* pages/aboutme/aboutme.wxss */
+
+.aboutme {
+    color: white;
+    font-size: medium;
+    margin: 20rpx;
+}

@@ -1,0 +1,16 @@
+/* pages/color/color.wxss */
+.display {
+  height: 100px;
+  background-color: #70AF68;
+  margin-top: 40rpx;
+  border-radius: 20rpx;
+  width: 100%;
+}
+
+.value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto 20rpx;
+  color: white;
+}

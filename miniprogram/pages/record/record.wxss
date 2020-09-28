@@ -1,0 +1,120 @@
+/* pages/record/record.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 200rpx;
+  height: 100%;
+}
+
+
+
+/* 时间显示部分 */
+.time{
+  font-size: 25rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.timeshadow {
+  color: #FEF8F8;
+  padding: 5rpx 10rpx;
+  border-radius: 10rpx;
+  background-color: #606060;
+  opacity: 0.5;
+}
+
+/* 主体记录部分 */
+.frame {
+  margin-top: 50rpx;
+}
+
+.record {
+  /* border: 1px solid white; */
+  border-radius: 30rpx;
+  font-size: 30rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 40rpx;
+  min-height: 300rpx;
+}
+
+.title {
+  color: aqua;
+  font-size: 35rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15rpx;
+  margin-bottom: -60rpx;
+}
+
+.record .value{
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+}
+
+
+/* 提示信息 */
+.hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 auto;
+  width: 100%;
+  height: 60%;
+  color: #ffffff;
+  
+}
+
+.hint text {
+  /* background-color: #918e8e; */
+  opacity: 0.5;
+  padding: 5rpx 10rpx;
+  border-radius: 10rpx;
+}
+
+
+
+/* 底部添加按钮 */
+.add{
+  position: fixed;
+  bottom: 50rpx;
+  width: 100%;
+}
+
+.add image{
+  margin: 0 auto;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+
+/* 输入框部分 */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 80%;
+  height: 60%;
+  background-color: #70AF9E;
+}
+
+.btn {
+  position: fixed;
+  bottom: 310rpx;
+  left: 15%;
+  padding-left: 10rpx;
+}

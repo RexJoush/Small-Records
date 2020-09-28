@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-notify": "@vant/weapp/notify/index"
+  }
+}

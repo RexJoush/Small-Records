@@ -1,0 +1,35 @@
+<!--pages/feedback/feedback.wxml-->
+<van-row>
+
+    <van-col span="20" offset="2">
+        <view class="feedback">
+            <van-cell-group>
+                <van-field
+                    label="邮箱"
+                    title-width="2.2em"
+                    value="{{ email }}"
+                    maxlength="30"
+                    placeholder="请输入您的邮箱方便我提供回复"
+                    border="{{ true }}"
+                    bind:change="onChangeEmail"
+                />
+                <van-field
+                    value="{{ message }}"
+                    label="反馈"
+                    title-width="2.2em"
+                    type="textarea"
+                    placeholder="请输入留言"
+                    autosize
+                    maxlength="300"
+                    show-word-limit
+                    border="{{ false }}"
+                    bind:change="onChangeFeedback"
+                />
+
+            </van-cell-group>
+        </view>
+    </van-col>
+    <van-col span="8" offset="8">
+        <van-button color="#E88081" type="primary" size="large" bind:click="addFeedback" round>提交反馈</van-button>
+    </van-col>
+</van-row>

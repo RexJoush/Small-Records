@@ -1,0 +1,148 @@
+/* pages/anniversary/anniversary.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 200rpx;
+  height: 100%;
+}
+
+/* 纪念日 */
+.anniversary {
+  /* border: 1px solid white; */
+  border-radius: 30rpx;
+  font-size: 30rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 40rpx;
+  min-height: 300rpx;
+}
+
+/* 提示信息 */
+.hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 auto;
+  width: 100%;
+  height: 60%;
+  color: #ffffff;
+  
+}
+
+.hint text {
+  /* background-color: #918e8e; */
+  opacity: 0.5;
+  padding: 5rpx 10rpx;
+  border-radius: 10rpx;
+}
+
+/* 时间部分 */
+
+/* .time{
+  font-size: 25rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.timeshadow {
+  color: #FEF8F8;
+  padding: 5rpx 10rpx;
+  border-radius: 10rpx;
+  background-color: #606060;
+  opacity: 0.5;
+} */
+
+
+
+/* 主体纪念日数据部分 */
+.frame {
+  margin-top: 80rpx;
+}
+
+ /* 标题 */
+.title {
+  color: aqua;
+  font-size: 35rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 纪念日的日期 */
+.eventDate {
+  color: white;
+  font-size: 25rpx;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15rpx;
+  margin-bottom: -120rpx;
+}
+
+.value{
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+  font-size: 40rpx;
+}
+
+/* 展示天数，已经多少天*/
+.day {
+  font-size: 50rpx;
+  font-weight: bold;
+  margin: 20rpx;
+}
+
+
+/* 底部添加按钮 */
+.add{
+  position: fixed;
+  bottom: 50rpx;
+  width: 100%;
+}
+
+.add image{
+  margin: 0 auto;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+
+/* 弹出的输入框部分 */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 80%;
+  height: 40%;
+  background-color: #70AF9E;
+}
+
+.btn {
+  position: fixed;
+  bottom: 32%;
+  left: 15%;
+  padding-left: 10rpx;
+}
+
+.chooseDate {
+  color: #646566;
+}
+
+.input.van.field__input.field-index--van-field-input {
+  border: 1rpx black solid;
+}

@@ -1,0 +1,7 @@
+/* pages/feedback/feedback.wxss */
+.feedback {
+    background-color: #E88081;
+    border-radius: 30rpx;
+    padding: 20rpx;
+    margin: 50rpx 0rpx 20rpx 0rpx;
+}

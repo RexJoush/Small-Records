@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+      "pages/record/record",
+      "pages/anniversary/anniversary",
+      "pages/color/color",
+      "pages/notice/notice",
+    
+    "pages/me/me",
+      "pages/aboutme/aboutme",
+      "pages/feedback/feedback"
+    
+    
+    
+  ],
+  "window": {
+    "backgroundColor": "#70AF9E",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#70AF9E",
+    "navigationBarTitleText": "小记录",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#fff",
+    "backgroundColor":"#70AF9E",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/index0.png",
+      "selectedIconPath": "images/index1.png"
+    },
+    {
+      "pagePath": "pages/me/me",
+      "text": "我的",
+      "iconPath": "images/me0.png",
+      "selectedIconPath": "images/me1.png"
+    }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

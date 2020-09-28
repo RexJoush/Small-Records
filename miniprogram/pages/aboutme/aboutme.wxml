@@ -1,0 +1,6 @@
+<!--pages/aboutme/aboutme.wxml-->
+<view class="aboutme">
+
+    <text>{{aboutme}}</text>
+
+</view>

@@ -1,0 +1,120 @@
+<!--pages/color/color.wxml-->
+
+<!-- <text class="value"></text> -->
+
+
+<!-- <button type="primary" bindtap="jump">jump</button> -->
+
+<van-row>
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #D9676F;"><view class="value">#D9676F</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #70AF68;"><view class="value">#70AF68</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #70AF9E;"><view class="value">#70AF9E</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #DA6184;"><view class="value">#DA6184</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #67D388;"><view class="value">#67D388</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #3F7DC6;"><view class="value">#3F7DC6</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #8A71C3;"><view class="value">#8A71C3</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #F1BC42;"><view class="value">#F1BC42</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #5F9EA0;"><view class="value">#5F9EA0</view></view></van-row>
+  </van-col>
+
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #F08080;"><view class="value">#F08080</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #DAA520;"><view class="value">#DAA520</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #CD5C5C;"><view class="value">#CD5C5C</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #778899;"><view class="value">#778899</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #393939;"><view class="value">#393939</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #008B8B;"><view class="value">#008B8B</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #D2691E;"><view class="value">#D2691E</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #B22222;"><view class="value">#B22222</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #FA8072;"><view class="value">#FA8072</view></view></van-row>
+  </van-col>
+
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #BC8F8F;"><view class="value">#BC8F8F</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #ADD7E5;"><view class="value">#ADD7E5</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #87CEEA;"><view class="value">#87CEEA</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #6FAE9D;"><view class="value">#6FAE9D</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #EA967A;"><view class="value">#EA967A</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #FF9F79;"><view class="value">#FF9F79</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #CC595C;"><view class="value">#CC595C</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #F0807F;"><view class="value">#F0807F</view></view></van-row>
+  </van-col>
+  
+  <van-col span="20" offset="2">
+    <van-row><view class="display" style="background-color: #BA8E8F;"><view class="value">#BA8E8F</view></view></van-row>
+  </van-col>
+
+
+
+</van-row>
