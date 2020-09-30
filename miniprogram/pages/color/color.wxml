@@ -21,10 +21,6 @@
   <van-col span="20" offset="2">
     <van-row><view class="display" style="background-color: #DA6184;"><view class="value">#DA6184</view></view></van-row>
   </van-col>
-  
-  <van-col span="20" offset="2">
-    <van-row><view class="display" style="background-color: #67D388;"><view class="value">#67D388</view></view></van-row>
-  </van-col>
 
   <van-col span="20" offset="2">
     <van-row><view class="display" style="background-color: #3F7DC6;"><view class="value">#3F7DC6</view></view></van-row>
@@ -69,10 +65,6 @@
 
   <van-col span="20" offset="2">
     <van-row><view class="display" style="background-color: #D2691E;"><view class="value">#D2691E</view></view></van-row>
-  </van-col>
-
-  <van-col span="20" offset="2">
-    <van-row><view class="display" style="background-color: #B22222;"><view class="value">#B22222</view></view></van-row>
   </van-col>
 
   <van-col span="20" offset="2">
