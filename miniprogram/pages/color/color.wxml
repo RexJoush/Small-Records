@@ -15,10 +15,6 @@
   </van-col>
 
   <van-col span="20" offset="2">
-    <van-row><view class="display" style="background-color: #70AF9E;"><view class="value">#70AF9E</view></view></van-row>
-  </van-col>
-
-  <van-col span="20" offset="2">
     <van-row><view class="display" style="background-color: #DA6184;"><view class="value">#DA6184</view></view></van-row>
   </van-col>
 
@@ -37,7 +33,6 @@
   <van-col span="20" offset="2">
     <van-row><view class="display" style="background-color: #5F9EA0;"><view class="value">#5F9EA0</view></view></van-row>
   </van-col>
-
 
   <van-col span="20" offset="2">
     <van-row><view class="display" style="background-color: #F08080;"><view class="value">#F08080</view></view></van-row>
@@ -64,10 +59,6 @@
   </van-col>
 
   <van-col span="20" offset="2">
-    <van-row><view class="display" style="background-color: #D2691E;"><view class="value">#D2691E</view></view></van-row>
-  </van-col>
-
-  <van-col span="20" offset="2">
     <van-row><view class="display" style="background-color: #FA8072;"><view class="value">#FA8072</view></view></van-row>
   </van-col>
 
@@ -81,10 +72,6 @@
   
   <van-col span="20" offset="2">
     <van-row><view class="display" style="background-color: #87CEEA;"><view class="value">#87CEEA</view></view></van-row>
-  </van-col>
-  
-  <van-col span="20" offset="2">
-    <van-row><view class="display" style="background-color: #6FAE9D;"><view class="value">#6FAE9D</view></view></van-row>
   </van-col>
   
   <van-col span="20" offset="2">
@@ -106,7 +93,5 @@
   <van-col span="20" offset="2">
     <van-row><view class="display" style="background-color: #BA8E8F;"><view class="value">#BA8E8F</view></view></van-row>
   </van-col>
-
-
 
 </van-row>

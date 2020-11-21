@@ -1,7 +1,7 @@
 // pages/record/record.js
 
 import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
-
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
 Page({
   
   /**
@@ -186,7 +186,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -252,6 +252,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
+    wx.showLoading({
+      title: '获取数据',
+    })
+
     // 获取所有记录
     wx.cloud.callFunction({
       name: 'http',
@@ -263,6 +268,10 @@ Page({
         let data = JSON.parse(res.result);
         // 获取到了有数据
         if(data.data.length != 0){
+          wx.hideLoading({
+            success: (res) => {
+            },
+          })
           this.setData({
             record: data.data,
             isData: false
@@ -270,10 +279,15 @@ Page({
         } 
         // 暂未添加数据
         else {
+          wx.hideLoading({
+            success: (res) => {
+            },
+          })
           this.setData({
             record: data.data,
             isData: true
           });
+          
         }
       },
 

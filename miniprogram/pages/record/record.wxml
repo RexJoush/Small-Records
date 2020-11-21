@@ -122,7 +122,8 @@
 
 <!-- 删除框 -->
 <van-dialog id="van-dialog" />
-
+<!-- 加载提示框 -->
+<van-toast id="van-toast" />
 
 <!-- <view class="frame">
   <van-row>

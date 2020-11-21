@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: wx.getStorageSync('userInfo'),
+    userInfo: {},
+    avatarUrl: '',
+    nickName: '',
     isLogin: false,
   },
 
@@ -19,9 +21,11 @@ Page({
       success: res => {
         if(res.authSetting['scope.userInfo']) {
           wx.setStorageSync('userInfo', e.detail.userInfo);
+          
           this.setData({
             isLogin: true,
-            userInfo: e.detail.userInfo
+            avatarUrl: e.detail.userInfo.avatarUrl,
+            nickName: e.detail.userInfo.nickName
           });
           wx.cloud.callFunction({
             name: 'http',
@@ -88,13 +92,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(this.data.userInfo);
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success: res => {
+              this.setData({
+                avatarUrl: res.userInfo.avatarUrl,
+                nickName: res.userInfo.nickName
+              })
+            }
+          })
+        }
+      }
+    })
     let that = this;
     wx.getSetting({
       withSubscriptions: true,
       success: res => {
-        // console.log(res.authSetting['scope.userInfo']);
-        // console.log(typeof res.authSetting['scope.userInfo']);
         if(res.authSetting['scope.userInfo']) {
           that.setData({
             isLogin: true

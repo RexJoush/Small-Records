@@ -186,7 +186,9 @@ Page({
   onShow: function () {
 
     // 获取所有记录
-    console.log("onShow");
+    wx.showLoading({
+      title: '获取数据',
+    })
     let openid = wx.getStorageSync('openid');
     console.log(openid);
 
@@ -204,19 +206,27 @@ Page({
 
         // 获取到了有数据
         if(data.data.length != 0){
+          wx.hideLoading({
+            success: (res) => {
+            },
+          })
           this.setData({
             anniversary: data.data,
             isData: false
           });
+          
         } 
         // 暂未添加数据
         else {
+          wx.hideLoading({
+            success: (res) => { 
+            },
+          })
           this.setData({
             anniversary: data.data,
             isData: true
           });
         }
-
       },
       fail: res => {
         wx.showToast({

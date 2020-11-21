@@ -17,13 +17,13 @@
                 width="130rpx"
                 height="130rpx"
                 fit="cover"
-                src="{{userInfo.avatarUrl}}"
+                src="{{avatarUrl}}"
               />
             </view>
           </van-col>
           <van-col span="24">
             <view class="user_nickname">
-              <view>{{userInfo.nickName}}</view>
+              <view>{{nickName}}</view>
             </view>
           </van-col>
         </van-row>
