@@ -6,12 +6,11 @@
       "pages/anniversary/anniversary",
       "pages/color/color",
       "pages/notice/notice",
+      "pages/edition/edition",
     
     "pages/me/me",
       "pages/aboutme/aboutme",
       "pages/feedback/feedback"
-    
-    
     
   ],
   "window": {

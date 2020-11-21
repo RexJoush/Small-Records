@@ -26,7 +26,7 @@
         <view class="anniversary" id="{{item.anniversary_id}}" style="background-color: {{item.color}};" bind:longpress="del">
           
         <view class="value">{{item.name}}<span class="day">{{item.value}}</span>天</view>
-
+          
         </view>
       </van-col>
     </van-row>

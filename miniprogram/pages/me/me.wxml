@@ -75,7 +75,7 @@
   contentPosition="center"
   customStyle="color: #ffffff; border-color: #ffffff; font-size: 25rpx;"
   >
-  <text bindtap="gotoAboutme" decode="true">Rex Joush | &nbsp;关于我</text>
+  <text bindtap="gotoAboutme" decode="true">Rex Joush | &nbsp;关于我 &nbsp;v1.0.1</text>
   </van-divider>
 
 </view>

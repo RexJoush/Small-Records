@@ -1,0 +1,35 @@
+/* pages/edition/edition.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 200rpx;
+  height: 100%;
+}
+
+.edition {
+  margin-top: 50rpx;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.frame {
+  margin: 0rpx 40rpx;
+}
+.frame .time {
+  font-size: small;
+  color: white;
+}
+.frame .version {
+  font-size: large;
+  color: white;
+  padding-bottom: 10rpx;
+}
+.frame .value {
+  font-size: medium;
+  padding-bottom: 20rpx;
+  color: white;
+}

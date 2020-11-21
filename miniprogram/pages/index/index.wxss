@@ -44,9 +44,11 @@ page {
   border-bottom: white solid 1rpx;
   border-top: white solid 1rpx; */
 }
+/* 公告栏 */
 .van-notice-bar__content {
   font-size: medium;
 }
+/* 我的小记录 */
 .nav1 {
   border-radius: 30rpx;
   color: white !important;
@@ -55,6 +57,7 @@ page {
   margin-top: 30rpx !important;
   padding: 30rpx !important;
 }
+/* 我的纪念日 */
 .nav2 {
   border-radius: 30rpx;
   color: white !important;
@@ -69,4 +72,11 @@ page {
 
 .van-icon-arrow {
   color: white !important;
+}
+
+/* 底部关于我 */
+.about {
+  position: fixed;
+  bottom: 10rpx;
+  width: 100%;
 }

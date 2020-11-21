@@ -10,6 +10,11 @@ Page({
     login: "",
   },
 
+  gotoEdition: function(){
+    wx.navigateTo({
+      url: '/pages/edition/edition',
+    })
+  },
   
   bindGetUserInfo (e) {
     console.log(e.detail.userInfo)

@@ -116,5 +116,15 @@
   </view>
 </van-overlay>
 
+<!-- 底部导航栏 -->
+<view class="about">
+
+  <van-divider
+  contentPosition="center"
+  customStyle="color: #ffffff; border-color: #ffffff; font-size: 25rpx;"
+  >
+    <text bindtap="gotoEdition" decode="true">版本日志</text>
+  </van-divider>
+</view>
 
 <van-notify id="van-notify" />

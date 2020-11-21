@@ -1,0 +1,33 @@
+<!--pages/edition/edition.wxml-->
+<view class="frame">
+  <view class="edition" style="background: #D9676F">
+    <van-row>
+      <van-col span="8"><view class="version">v1.0.1</view></van-col>
+    </van-row>
+    <van-row>
+      <van-col span="8"><view class="time">2020.11.21</view></van-col>
+    </van-row>
+    
+    <van-divider />
+    <view class="value">
+      <view>1.更新业务逻辑，增加数据加载动画</view>
+      <view>2.修复头像可能显示失败的问题</view>
+      <view>3.添加版本介绍页面</view>
+    </view>
+  </view>
+
+  <view class="edition" style="background: #008B8B">
+    <van-row>
+      <van-col span="8"><view class="version">v1.0.0</view></van-col>
+    </van-row>
+    <van-row>
+      <van-col span="8"><view class="time">2020.09.30</view></van-col>
+    </van-row>
+    
+    <van-divider />
+    <view class="value">
+      <view>1.系统上线，包含基本的功能</view>
+    </view>
+  </view>
+
+</view>
