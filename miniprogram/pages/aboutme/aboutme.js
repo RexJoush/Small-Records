@@ -23,7 +23,7 @@ Page({
         // console.log(res);
         let data = JSON.parse(res.result);
         that.setData({
-          aboutme: data.data[0].aboutme
+          aboutme: data.data[0].about_me
         })
       }
     })

@@ -1,5 +1,24 @@
 <!--pages/edition/edition.wxml-->
 <view class="frame">
+
+  <!-- 1.0.2 -->
+  <view class="edition" style="background: #FF9F79">
+    <van-row>
+      <van-col span="8"><view class="version">v1.0.2</view></van-col>
+    </van-row>
+    <van-row>
+      <van-col span="8"><view class="time">2021.03.12</view></van-col>
+    </van-row>
+    
+    <van-divider />
+    <view class="value">
+      <view>1.优化数据加载逻辑</view>
+      <view>2.数据库重构</view>
+      <view>3.添加反馈增加确认信息</view>
+    </view>
+  </view>
+
+  <!-- 1.0.1 -->
   <view class="edition" style="background: #D9676F">
     <van-row>
       <van-col span="8"><view class="version">v1.0.1</view></van-col>
@@ -15,7 +34,7 @@
       <view>3.添加版本介绍页面</view>
     </view>
   </view>
-
+  <!-- v1.0.0 -->
   <view class="edition" style="background: #008B8B">
     <van-row>
       <van-col span="8"><view class="version">v1.0.0</view></van-col>

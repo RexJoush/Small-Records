@@ -33,3 +33,6 @@
         <van-button color="#E88081" type="primary" size="large" bind:click="addFeedback" round>提交反馈</van-button>
     </van-col>
 </van-row>
+
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />
