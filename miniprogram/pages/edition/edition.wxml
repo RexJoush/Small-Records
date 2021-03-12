@@ -12,7 +12,7 @@
     
     <van-divider />
     <view class="value">
-      <view>1.优化数据加载逻辑</view>
+      <view>1.小记录的记录长度增加到200字符</view>
       <view>2.数据库重构</view>
       <view>3.添加反馈增加确认信息</view>
     </view>

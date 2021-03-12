@@ -94,7 +94,7 @@
               value="{{value}}"
               title-width="2.2em"
               type="textarea"
-              maxlength="150"
+              maxlength="200"
               show-word-limit
               label="内容"
               autosize
