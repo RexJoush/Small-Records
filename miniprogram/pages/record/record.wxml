@@ -35,23 +35,25 @@
 
 </block> -->
 
-<block wx:for="{{record}}" wx:key="*this">
+<view class="main-container">
+  <block wx:for="{{record}}" wx:key="*this">
 
-  <view class="frame">
-    <van-row>
-      <van-col span="20" offset="2">
-        <view class="time"><span class="timeshadow">{{item.dateString}}</span></view>
-        <view class="title">{{item.title}}</view>
-        <view class="record" id="{{item.record_id}}" style="background-color: {{item.color}};" bind:longpress="del">
-          
-          <view class="value">{{item.value}}</view>
+    <view class="frame">
+      <van-row>
+        <van-col span="20" offset="2">
+          <view class="time"><span class="timeshadow">{{item.dateString}}</span></view>
+          <view class="title">{{item.title}}</view>
+          <view class="record" id="{{item.record_id}}" style="background-color: {{item.color}};" bind:longpress="del">
+            
+            <view class="value">{{item.value}}</view>
 
-        </view>
-      </van-col>
-    </van-row>
-  </view>
+          </view>
+        </van-col>
+      </van-row>
+    </view>
 
-</block>
+  </block>
+</view>
 <view class="hint" wx:if="{{isData}}">
   <text class="hint_text">快来添加你的第一条数据吧</text>
 </view>

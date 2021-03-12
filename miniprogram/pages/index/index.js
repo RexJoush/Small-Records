@@ -239,6 +239,12 @@ Page({
     });
     // console.log(wx.getStorageSync('userInfo'));
     
+  },
+  onShareAppMessage: function (res) {
+    return {
+      title: "小纪念",
+      path: 'pages/index/index',
+    }
   }
 
   

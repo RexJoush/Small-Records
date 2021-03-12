@@ -112,6 +112,12 @@ page {
   background-color: #70AF9E;
 }
 
+.main-container {
+  position: relative;
+  margin-bottom: 200rpx;
+  display: block;
+}
+
 .btn {
   position: fixed;
   bottom: 310rpx;
