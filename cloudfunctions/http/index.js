@@ -1,7 +1,7 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk');
 let got = require("got");
-let host = "http://47.116.79.68:4001";
+let host = "http://www.rexjoush.com:4001";
 
 cloud.init();
 
