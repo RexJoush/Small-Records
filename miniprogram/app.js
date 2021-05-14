@@ -2,7 +2,6 @@
 App({
 
   onLaunch: function () {
-    
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -23,6 +22,13 @@ App({
           wx.getUserInfo({
             success: res => {
               wx.setStorageSync('userInfo', res.userInfo);
+              wx.cloud.callFunction({
+                name: 'http',
+                data: {
+                  url: '/wxapp/index/addUser',
+                  data: res.userInfo,
+                }
+              })
             }
           })
         }
