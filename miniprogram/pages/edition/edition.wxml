@@ -1,6 +1,21 @@
 <!--pages/edition/edition.wxml-->
 <view class="frame">
 
+<!-- 1.0.3 -->
+<view class="edition" style="background: #5F9EA0">
+    <van-row>
+      <van-col span="8"><view class="version">v1.0.3</view></van-col>
+    </van-row>
+    <van-row>
+      <van-col span="8"><view class="time">2021.05.15</view></van-col>
+    </van-row>
+    
+    <van-divider />
+    <view class="value">
+      <view>1.适配新的登录接口，修改登录逻辑</view>
+    </view>
+  </view>
+
   <!-- 1.0.2 -->
   <view class="edition" style="background: #FF9F79">
     <van-row>

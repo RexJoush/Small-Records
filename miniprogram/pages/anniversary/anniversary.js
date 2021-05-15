@@ -8,9 +8,6 @@ Page({
   /**
    * 页面的初始数据
    */
-
-  
-
   data: {
     // searchValue: "",
     title: '', // 纪念日输入标题
@@ -25,7 +22,6 @@ Page({
 
     isData: false, // 是否有数据
 
-
     // formatter(type, value) {
     //   if (type === 'year') {
     //     return `${value}年`;
@@ -37,9 +33,6 @@ Page({
     // },
 
   },
-
-
-
 
   // 删除记录
   del: function(e) {
@@ -83,7 +76,6 @@ Page({
 
         })
       })
-
       .catch(() => {
         // on cancel，取消
         console.log("no");
@@ -191,6 +183,7 @@ Page({
     })
     let openid = wx.getStorageSync('openid');
     console.log(openid);
+    console.log("userInfo", wx.getStorageSync('userInfo'));
 
     wx.cloud.callFunction({
       name: 'http',

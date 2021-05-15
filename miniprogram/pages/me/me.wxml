@@ -1,12 +1,9 @@
 <!--pages/me/me.wxml-->
 
 <van-row>
-
   <van-col span="22" offset="1">
-
     <!-- 头像部分 -->
     <view class="user">
-
       <!-- 头像和名字 -->
       <span wx:if="{{isLogin}}">
         <van-row>
@@ -34,15 +31,13 @@
         <van-row>
           <van-col span="8" offset="8">
             <view class="loginBtn">
-              <van-button round type="info" color="#70AF9E" size="large" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</van-button>
+              <van-button round type="info" color="#70AF9E" size="large" open-type="getUserProfile" bindtap="getUserProfile">点击登录</van-button>
             </view>
           </van-col>
         </van-row>
       </span>
     </view>
-
   </van-col>
-
 </van-row>
 
 <!-- 导航栏 -->
@@ -75,7 +70,7 @@
   contentPosition="center"
   customStyle="color: #ffffff; border-color: #ffffff; font-size: 25rpx;"
   >
-  <text bindtap="gotoAboutme" decode="true">Rex Joush | &nbsp;关于我 &nbsp;v1.0.1</text>
+  <text bindtap="gotoAboutme" decode="true">Rex Joush | &nbsp;关于我 &nbsp;v1.0.3</text>
   </van-divider>
 
 </view>

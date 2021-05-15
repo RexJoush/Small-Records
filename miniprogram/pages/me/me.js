@@ -5,7 +5,7 @@ Page({
 
   /**
    * 页面的初始数据
-   */
+   */ 
   data: {
     userInfo: {},
     avatarUrl: '',
@@ -13,43 +13,74 @@ Page({
     isLogin: false,
   },
 
-
-  getUserInfo: function(e) {
+  getUserProfile(e) {
     let that = this;
-    wx.getSetting({
-      withSubscriptions: true,
-      success: res => {
-        if(res.authSetting['scope.userInfo']) {
-          wx.setStorageSync('userInfo', e.detail.userInfo);
-          
-          this.setData({
-            isLogin: true,
-            avatarUrl: e.detail.userInfo.avatarUrl,
-            nickName: e.detail.userInfo.nickName
-          });
-          wx.cloud.callFunction({
-            name: 'http',
-            data: {
-              url: '/wxapp/index/addUser',
-              data: e.detail.userInfo,
-            }
-          })
-
-        } else {
-          that.onLoad();
-          wx.showToast({
-            icon: 'none',
-            title: '如需使用，请同意授权',
-          })
-        }
+    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
+    // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+    wx.getUserProfile({
+      desc: '用于完善用户资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        console.log("getUserProfile", res);
+        wx.setStorageSync('userInfo', res.userInfo);
+        wx.setStorageSync('isLogin', true);
+        this.setData({
+          isLogin: true,
+          avatarUrl: res.userInfo.avatarUrl,
+          nickName: res.userInfo.nickName
+        });
+        wx.cloud.callFunction({
+          name: 'http',
+          data: {
+            url: '/wxapp/index/addUser',
+            data: res.userInfo,
+          }
+        })
+      },
+      fail: error => {
+        console.log("fail error", error);
+        wx.showToast({
+          icon: 'none',
+          title: '如需使用，请同意授权',
+        })
       }
     })
-    wx.setStorageSync('userInfo', e.detail.userInfo);
-    this.setData({
-      isLogin: true,
-      userInfo: e.detail.userInfo
-    })
   },
+
+  // getUserInfo: function(e) {
+  //   console.log("getInfo");
+  //   let that = this;
+  //   wx.getSetting({
+  //     withSubscriptions: true,
+  //     success: res => {
+  //       if(res.authSetting['scope.userInfo']) {
+  //         wx.setStorageSync('userInfo', e.detail.userInfo);
+  //         this.setData({
+  //           isLogin: true,
+  //           avatarUrl: e.detail.userInfo.avatarUrl,
+  //           nickName: e.detail.userInfo.nickName
+  //         });
+  //         wx.cloud.callFunction({
+  //           name: 'http',
+  //           data: {
+  //             url: '/wxapp/index/addUser',
+  //             data: e.detail.userInfo,
+  //           }
+  //         })
+  //       } else {
+  //         that.onLoad();
+  //         wx.showToast({
+  //           icon: 'none',
+  //           title: '如需使用，请同意授权',
+  //         })
+  //       }
+  //     }
+  //   })
+  //   wx.setStorageSync('userInfo', e.detail.userInfo);
+  //   this.setData({
+  //     isLogin: true,
+  //     userInfo: e.detail.userInfo
+  //   })
+  // },
 
   gotoAboutme: function(){
     wx.navigateTo({
@@ -63,22 +94,15 @@ Page({
 
   // 检查登录
   checklogin: function(url){
-    wx.getSetting({
-      withSubscriptions: true,
-      success: res => {
-        console.log(res.authSetting['scope.userInfo']);
-        if(res.authSetting['scope.userInfo']) {
-          wx.navigateTo({
-            url: url,
-          });
-        } else {
-          setTimeout(this.loginFirst,100);
-        }
-      }
-    })
-
+    console.log("check login");
+    if(wx.getStorageSync('isLogin')) {
+      wx.navigateTo({
+        url: url,
+      });
+    } else {
+      setTimeout(this.loginFirst,100);
+    }
   },
-
 
   // 请先登录
   loginFirst: function(){
@@ -92,36 +116,64 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                nickName: res.userInfo.nickName
-              })
-            }
-          })
-        }
-      }
-    })
-    let that = this;
-    wx.getSetting({
-      withSubscriptions: true,
-      success: res => {
-        if(res.authSetting['scope.userInfo']) {
-          that.setData({
-            isLogin: true
-          })
-        } else {
-          that.setData({
-            isLogin: false
-          })
-        }
-      },
-    })
+    let login = wx.getStorageSync('isLogin');
+    let userInfo = wx.getStorageSync('userInfo');
+    console.log("onLoad login", login);
+    // 已保存用户信息
+    if (login){
+      this.setData({
+        isLogin: true, 
+        avatarUrl: userInfo.avatarUrl,
+        nickName: userInfo.nickName
+      });
+      
+    }
+    // 未保存用户信息
+    else {
+      this.setData({
+        isLogin: false,
+      })
+    }
+
+    // wx.getSetting({
+    //   success: res => {
+        
+    //     if (res.authSetting['scope.userInfo']) {
+    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+    //       wx.getUserInfo({
+    //         success: res => {
+    //           this.setData({
+    //             avatarUrl: res.userInfo.avatarUrl,
+    //             nickName: res.userInfo.nickName
+    //           })
+    //         },
+    //         fail: error => {
+    //           console.log("getUserInfo error", error);
+    //         }
+    //       })
+    //     } else {
+    //       console.log("error")
+    //     }
+    //   },
+    //   fail: error => {
+    //     console.log(error);
+    //   }
+    // })
+    // let that = this;
+    // wx.getSetting({
+    //   withSubscriptions: true,
+    //   success: res => {
+    //     if(res.authSetting['scope.userInfo']) {
+    //       that.setData({
+    //         isLogin: true
+    //       })
+    //     } else {
+    //       that.setData({
+    //         isLogin: false
+    //       })
+    //     }
+    //   },
+    // })
   },
 
   /**
@@ -170,9 +222,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-      return {
-        title: "小纪念",
-        path: 'pages/index/index',
-      }
+    return {
+      title: "小纪念",
+      path: 'pages/index/index',
+    }
   }
 })

@@ -14,27 +14,7 @@ App({
         traceUser: true,
       })
     }
-
-    wx.getSetting({
-      withSubscriptions: true,
-      success: res => {
-        if(res.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: res => {
-              wx.setStorageSync('userInfo', res.userInfo);
-              wx.cloud.callFunction({
-                name: 'http',
-                data: {
-                  url: '/wxapp/index/addUser',
-                  data: res.userInfo,
-                }
-              })
-            }
-          })
-        }
-      }
-    })
-    
+    wx.setStorageSync('isLogin', false);
     this.globalData = {
       
     }

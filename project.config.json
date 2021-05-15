@@ -39,7 +39,7 @@
   },
   "appid": "wxadb4444d6b053354",
   "projectname": "Small%20Records",
-  "libVersion": "2.8.1",
+  "libVersion": "2.17.0",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
